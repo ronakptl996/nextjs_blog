@@ -49,6 +49,8 @@ body {
   & .arrow-btn {
     transition: width 300ms ease;
     width: 50px;
+    display: flex;
+    justify-content: center;
     &:hover {
       width: 60px;
     }
@@ -62,4 +64,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.featuredPostCard {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.featuredPostCard:hover .featuredPostCard_inner {
+  transition: all 300ms ease;
+  transform: scale(1.2);
 }
