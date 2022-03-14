@@ -35,6 +35,8 @@ body {
   & .arrow-btn {
     transition: width 300ms ease;
     width: 50px;
+    display: flex;
+    justify-content: center;
   }
   &:hover {
     & .arrow-btn {
