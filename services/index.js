@@ -2,9 +2,13 @@ import { request, gql } from 'graphql-request'
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHICS_ENDPOINT
 
 export const getPosts = async () => {
+  // const start = +page === 1 ? 0 : (+page - 1) * 3
+  // console.log(start)
   const query = gql`
-    query MyQuery {
-      postsConnection {
+    query MyQuery() {
+      postsConnection(
+        orderBy: createdAt_DESC
+        ) {
         edges {
           node {
             author {
